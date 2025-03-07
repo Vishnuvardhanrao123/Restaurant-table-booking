@@ -1,0 +1,75 @@
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .primary-btn{
+        @apply bg-primary text-white font-bold px-4 py-2 rounded-full;
+    }
+    .secondary-btn{
+        @apply bg-gray-300 text-white font-bold px-4 py-2 rounded-full;
+    }
+    @layer utilities{
+        .img-shadow{
+           
+            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.8))
+        }
+    }
+    @keyframes border-anim {
+      0% {
+        border-color: transparent;
+        transform: scale(1);
+      }
+      50% {
+       
+        transform: scale(1.05); 
+      }
+      100% {
+        border-color: transparent;
+        transform: scale(1);
+      }
+    }
+  
+    .animate-border {
+      animation: border-anim 1s ease-in-out infinite;
+    }
+}
+
+
+
+.hamburger-icon {
+    @apply text-2xl cursor-pointer sm:hidden;
+  }
+  
+
+  .mobile-menu {
+    @apply flex flex-col absolute top-16 bg-white w-full left-0 p-4 shadow-lg sm:hidden;
+  }
+  
+
+.menu-item {
+    @apply hover:shadow-lg p-2 bg-slate-200 rounded hover:border-b-4 border-primary uppercase cursor-pointer font-semibold;
+  }
+
+
+.bg-saffron {
+    background-color: #FF9933;
+  }
+
+  .saffron{
+    color: #FF9933;
+  }
+
+  .custom-section {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .bg-custom-orange {
+    background-color: #FFA500;
+  }
+
